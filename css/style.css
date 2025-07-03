@@ -700,3 +700,245 @@ a:focus {
 }
 
 /* end footer section*/
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- Shipment / Quote form polish ---------- */
+
+/*   1) OVERALL SECTION  */
+.quote_section {
+  background:#fff;
+  color:#222;
+  padding:2rem max(1rem,env(safe-area-inset-left)) 1rem max(1rem,env(safe-area-inset-right));
+}
+
+.quote_section .section_title {
+  font-size:2rem;
+  font-weight:700;
+  text-align:left;
+  margin:0 0 2rem;
+  border-bottom:4px solid #78cffd;
+  display:inline-block;
+  padding-bottom:.25rem;
+}
+
+/*   2) 3-COLUMN GRID  */
+.shipment_form{
+  --card-bg:#f8f9fb;
+  --border:#d9d9d9;
+  --radius:6px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:2rem;
+}
+
+@media (max-width:1024px){         /* 2 col tablets */
+  .shipment_form{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:680px){          /* 1 col phones  */
+  .shipment_form{grid-template-columns:1fr;}
+}
+
+/*   3) FIELDSET CARDS  */
+.shipment_form fieldset{
+  background:var(--card-bg);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:1.75rem;
+  min-width:0;                    /* no overflow */
+}
+.shipment_form legend{
+  font-size:1.125rem;
+  font-weight:600;
+  color:#0a0057;
+  padding:0 .25rem;
+  margin-bottom:.75rem;
+}
+
+/*   4) INPUTS  */
+.shipment_form input,
+.shipment_form textarea{
+  width:100%;
+  padding:.65rem .85rem;
+  font-size:.95rem;
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  background:#fff;
+  color:#333;
+  margin-top:.5rem;
+  transition:border-color .15s;
+}
+.shipment_form input:focus{
+  border-color: #0096ff;   /* or whatever colour you like */
+  outline:none;           /* optional – remove default outline */
+}
+
+  /* --- Shipment notes textarea tweak --------------------------- */
+.shipment_form textarea{
+  height:160px;     /* ← adjust to your taste (e.g. 120-200px)   */
+  resize:none;      /* no manual resize grip                    */
+  line-height:1.4;  /* nicer vertical rhythm                    */
+}
+
+/* === Radio-line layout ==================================== */
+.radio_group{
+  display:inline-flex;   /* sit left-to-right */
+  flex-wrap:nowrap;      /* stay on one row (will wrap below in @media) */
+  align-items:center;
+  gap:1.25rem;           /* space between blocks */
+}
+
+/* main label “Temperature Controlled” */
+.radio_group span{
+  flex:0 0 auto;         /* just the text width */
+  margin:0;              /* kill earlier bottom margin */
+  font-weight:500;
+}
+
+/* Yes / No bits */
+.radio_group label{
+  display:inline-flex;
+  align-items:center;
+  gap:.4rem;             /* circle ↔ text */
+}
+
+/* safety: if the row gets *too* narrow, allow wrap */
+@media (max-width:480px){
+  .radio_group{flex-wrap:wrap; gap:.6rem;}
+}
+
+/*   5) LABELS   */
+.shipment_form label{
+  display:block;                  /* each label on its own line */
+  font-weight:500;
+  margin-top:1rem;
+}
+
+/*   6) SUBMIT BUTTON  */
+.shipment_form button{
+  grid-column:1/-1;               /* full-width bottom row */
+  align-self:end;
+  justify-self:end;
+  margin-top:2rem;
+  padding:.9rem 3.25rem;
+  font-size:1rem;
+  background:#0a0057;
+  color:#fff;
+  border:none;
+  border-radius:var(--radius);
+  cursor:pointer;
+  transition:opacity .2s;
+  max-width:200px;      /* stops before touching screen edges   */
+  width:100%;
+}
+.shipment_form button:hover{opacity:.9;}
+
+/* Vertical radio layout — comment out if you prefer inline */
+@media (max-width:480px){
+  .radio_group{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:.5rem;
+  }
+}
+
+/* ---------- Mobile input tuning ----------- */
+@media (max-width: 768px) {
+  /* 1) Prevent Safari zoom by using ≥16 px font */
+  .shipment_form input,
+  .shipment_form textarea,
+  .shipment_form select {
+    font-size: 16px;       /* 👈 key value */
+  }
+}
+
+/* 2) Make text & number inputs a normal line-height box */
+.shipment_form input[type="text"],
+.shipment_form input[type="number"],
+.shipment_form input[type="email"],
+.shipment_form input[type="tel"]{
+  height:48px;             /* consistent, comfortable tap target   */
+  line-height:1.2;
+}
+
+/* Keep textarea tall & non-resizable */
+.shipment_form textarea{
+  height:160px;
+  resize:none;
+  
+}
+/* Slightly lighter card & tiny shadow */
+.shipment_form fieldset{
+  background:#fdfdfd;                 /* almost white */
+  box-shadow:0 2px 4px rgba(0,0,0,.04);
+}
+
+/* Better label spacing */
+.shipment_form label{ margin:.25rem 0 .35rem; }
+
+/* 1) Two half-width inputs side-by-side (First / Last, radio “Other”) */
+.two_up{
+  display:flex;
+  gap:1rem;
+}
+.two_up > *{flex:1 1 50%;}
+
+/* 2) Uniform spacing for radio / check rows */
+.check_line{
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+  margin:.35rem 0;
+}
+
+
+
+/* ─────────────────  Extras layout  ───────────────── */
+/* drop this next to your other helpers */
+.full_row { grid-column: 1 / -1; }   /* span every column */
+/* titles inside the card */
+.block_title{
+  font-weight:600;
+  margin:.25rem 0 .75rem;
+}
+
+/* ------------- “How did you find us?” radios ------------- */
+.choice_grid{
+  display:flex;            /* sit side-by-side */
+  flex-wrap:wrap;          /* drop to the next line only if container gets too narrow */
+  gap:0.75rem 1.5rem;      /* vertical | horizontal space between options */
+  align-items:center;
+  padding:0;               /* kill any extra grid padding */
+}
+
+/* every label keeps its natural size */
+.choice_grid label{
+  flex:0 0 auto;
+}
+
+/* make only the “Other” line break to its own row */
+.choice_grid .other_wrap{
+  flex:0 0 100%;           /* full-width */
+  gap:.45rem;
+}
+
+/* phones: fall back to a tidy single column if you like */
+@media (max-width:680px){
+  .choice_grid{
+    flex-direction:column;
+    gap:.55rem;
+  }
+}
+.button_bar { grid-column: 1 / -1;       /* full-width */
+  display: flex;
+  justify-content: flex-end; }
+
