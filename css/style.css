@@ -942,3 +942,33 @@ a:focus {
   display: flex;
   justify-content: flex-end; }
 
+.service_img-box.full-banner img {
+  width: 100%;
+  height: 400px;         /* adjust as needed */
+  object-fit: cover;
+}
+
+.service_img-box.full-banner {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.service_img-box.full-banner h3 {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  color: white;
+  font-size: 36px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  margin: 0;
+}
+
+.framed-box {
+  background-color: transparent; /* or keep #fff if you want white box */
+  border: none;
+  padding: 40px 30px;
+  border-radius: 0;
+  box-shadow: none;
+  margin-top: -20px;
+}
