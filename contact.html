@@ -80,7 +80,7 @@
             <div class="header_top">
               <div class="header_top-contact">
 
-                <a href="" class="ml-4">
+                <a href="tel:+12533744276" class="ml-4">
                   <div>
                     <img src="images/phone.png" alt="" />
                   </div>
@@ -88,7 +88,7 @@
                    (253)374-4276
                   </span>
                 </a>
-                <a href="" class="ml-4">
+                <a href="mailto:rleade3@gmail.com" class="ml-4">
                   <div>
                     <img src="images/mail.png" alt="" />
                   </div>
@@ -139,7 +139,6 @@
     <!-- end header section -->
 
   </div>
-
 
 
 
@@ -202,7 +201,7 @@
       <div class="row  mb-3 pb-4">
         <div class="col-md-3 info_logo">
           <div class="logo-box">
-            <img src="images/logo-white.png" alt="">
+            <img src="images/logo.png" alt="">
             <span>
               PARWAN LLC
             </span>
@@ -215,15 +214,13 @@
             Address
           </h5>
           <p>
-            Seattle, WA
+            32115 105th PL SE Auburn WA 98092
           </p>
           <p>
-            +1 (253)374-4276
+            <a href="tel:+12533744276">+1 (253) 374-4276</a>
           </p>
           <p>
-            <a href="">
-              rleade3@gmail.com
-            </a>
+            <a href="mailto:rleade3@gmail.com">rleade3@gmail.com</a>
           </p>
         </div>
         <div class="col-md-3 info_links">
@@ -277,15 +274,15 @@
   <!-- Custom Leaflet Map JS -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      const map = L.map('map').setView([47.6062, -122.3321], 12); // Seattle
-
+      const map = L.map('map').setView([47.3143508, -122.2018253], 12); // Seattle
+  
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors'
       }).addTo(map);
-
-      L.marker([47.6062, -122.3321])
+  
+      L.marker([47.3143508, -122.2018253])
               .addTo(map)
-              .bindPopup('Seattle, WA')
+              .bindPopup('32115 105th pl se Auburn Wa 98092')
               .openPopup();
     });
   </script>
