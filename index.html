@@ -266,9 +266,9 @@
           About Us
         </h2>
         <p>
-          At Parwan LLC, we’re proud to be a small, dependable trucking company built on trust, punctuality, and personalized service. 
-          Whether you’re shipping across town or across the country, we bring dedication and care to every mile. 
-          As your logistics partner, we’re here to make sure your freight arrives safely, efficiently, and on time — every time.        
+          At Parwan LLC, we’re proud to be a small, dependable trucking company built on trust, punctuality, and personalized service.
+          Whether you’re shipping across town or across the country, we bring dedication and care to every mile.
+          As your logistics partner, we’re here to make sure your freight arrives safely, efficiently, and on time — every time.
         </p>
       </div>
 
@@ -411,7 +411,7 @@
           Address
         </h5>
         <p>
-          32115 105th PL SE Auburn WA 98092
+          Auburn WA 98092
         </p>
         <p>
           <a href="tel:+12533744276">+1 (253) 374-4276</a>
@@ -469,20 +469,20 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <!-- Custom Leaflet Map JS -->
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const map = L.map('map').setView([47.3143508, -122.2018253], 12); // Seattle
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const map = L.map('map').setView([47.3143508, -122.2018253], 12); // Seattle
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap contributors'
-    }).addTo(map);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+      }).addTo(map);
 
-    L.marker([47.3143508, -122.2018253])
-            .addTo(map)
-            .bindPopup('32115 105th pl se Auburn Wa 98092')
-            .openPopup();
-  });
-</script>
+      L.marker([47.3073, -122.2285])
+              .addTo(map)
+              .bindPopup('Auburn Wa 98092')
+              .openPopup();
+    });
+  </script>
 
 <!-- Optional styling to ensure map is visible -->
 <style>

@@ -214,7 +214,7 @@
             Address
           </h5>
           <p>
-            32115 105th PL SE Auburn WA 98092
+            Auburn WA 98092
           </p>
           <p>
             <a href="tel:+12533744276">+1 (253) 374-4276</a>
@@ -275,14 +275,14 @@
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const map = L.map('map').setView([47.3143508, -122.2018253], 12); // Seattle
-  
+
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors'
       }).addTo(map);
-  
-      L.marker([47.3143508, -122.2018253])
+
+      L.marker([47.3073, -122.2285])
               .addTo(map)
-              .bindPopup('32115 105th pl se Auburn Wa 98092')
+              .bindPopup('Auburn Wa 98092')
               .openPopup();
     });
   </script>
